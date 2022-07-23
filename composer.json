@@ -1,0 +1,19 @@
+{
+  "name": "ekomobile/coding-challenge-php",
+  "description": "Ekomobile Coding Challenge (PHP)",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "Ekomobile\\CodingChallenge\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": { "Ekomobile\\CodingChallenge\\Test\\": "test/" }
+  },
+  "require": {
+    "phpunit/phpunit": "6.1.4",
+    "phpcollection/phpcollection": "0.5.0",
+    "phpoption/phpoption": "1.5"
+  }
+}
