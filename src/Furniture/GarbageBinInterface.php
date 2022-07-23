@@ -14,5 +14,5 @@ interface GarbageBinInterface
      *
      * @return TrashInterface
      */
-    public function removeTrash(): TrashInterface;
+    public function removeTrash(): ?TrashInterface;
 }

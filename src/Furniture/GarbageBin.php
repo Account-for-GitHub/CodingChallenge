@@ -7,11 +7,19 @@ use Ekomobile\CodingChallenge\Stuff\TrashInterface;
 
 class GarbageBin implements GarbageBinInterface
 {
+	
+	private $trash_array;
+	
+	public function __construct(TrashInterface $trash_object)
+	{
+		$this->trash_array[] = $trash_object;
+	}
+	
     /**
      * {@inheritdoc}
      */
-    public function removeTrash(): TrashInterface
+    public function removeTrash(): ?TrashInterface
     {
-        return new Trash();
+        return array_pop($this->trash_array);
     }
 }
