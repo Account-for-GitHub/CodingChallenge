@@ -1,22 +1,15 @@
 <?php
 
 namespace Ekomobile\CodingChallenge\Room;
-use Ekomobile\CodingChallenge\Furniture\SinkInterface;
-use Ekomobile\CodingChallenge\Furniture\ToiletteInterface;
+
 use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithToilette;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithSink;
 
 /**
  * Не самое поэтичное место в доме, но очень необходимое.
  */
-interface BathroomInterface extends SpaceInterface
+interface BathroomInterface extends SpaceInterface, WithToilette, WithSink
 {
-    /**
-     * @return ToiletteInterface
-     */
-    public function getToilette(): ToiletteInterface;
 
-    /**
-     * @return SinkInterface
-     */
-    public function getSink(): SinkInterface;
 }

@@ -2,34 +2,18 @@
 
 namespace Ekomobile\CodingChallenge\Room;
 
-use Ekomobile\CodingChallenge\Furniture\CookerInterface;
-use Ekomobile\CodingChallenge\Furniture\GarbageBinInterface;
-use Ekomobile\CodingChallenge\Furniture\SinkInterface;
-use Ekomobile\CodingChallenge\Furniture\TvInterface;
 use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithSink;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithCooker;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithGarbageBin;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithTv;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithDishWasher;
+use Ekomobile\CodingChallenge\Room\Interfaces\WithTrashCan;
 
 /**
  * Сердце дома. По крайней мере, для кого-то.
  */
-interface KitchenInterface extends SpaceInterface
+interface KitchenInterface extends SpaceInterface, WithSink, WithCooker, WithGarbageBin, WithTv, WithDishWasher, WithTrashCan
 {
-    /**
-     * @return SinkInterface
-     */
-    public function getSink(): SinkInterface;
 
-    /**
-     * @return CookerInterface
-     */
-    public function getCooker(): CookerInterface;
-
-    /**
-     * @return GarbageBinInterface
-     */
-    public function getGarbageBin(): GarbageBinInterface;
-
-    /**
-     * @return TvInterface
-     */
-    public function getTv(): TvInterface;
 }
