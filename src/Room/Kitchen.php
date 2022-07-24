@@ -10,14 +10,17 @@ use Ekomobile\CodingChallenge\Furniture\GarbageBin;
 use Ekomobile\CodingChallenge\Furniture\GarbageBinInterface;
 use Ekomobile\CodingChallenge\Furniture\Sink;
 use Ekomobile\CodingChallenge\Furniture\SinkInterface;
+use Ekomobile\CodingChallenge\Furniture\TrashCan;
+use Ekomobile\CodingChallenge\Furniture\TrashCanInterface;
+use Ekomobile\CodingChallenge\Furniture\Tv;
 use Ekomobile\CodingChallenge\Furniture\TvInterface;
-use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\SpaceAbstractClass;
 use Ekomobile\CodingChallenge\VisitorInterface;
 
 /**
  * Простая реализация Кухни
  */
-class Kitchen implements KitchenInterface
+class Kitchen extends SpaceAbstractClass implements KitchenInterface
 {
     /**
      * @var CookerInterface
@@ -43,6 +46,12 @@ class Kitchen implements KitchenInterface
      * @var DishWasherInterface
      */
     private $dishWasher;
+	
+	
+	/**
+	 * @var TrashCanInterface
+	 */
+	private $trashCan;
 
     public function __construct()
     {
@@ -50,6 +59,8 @@ class Kitchen implements KitchenInterface
         $this->sink = new Sink();
         $this->garbageBin = new GarbageBin();
         $this->cooker = new Cooker();
+		$this->tv = new Tv();
+		$this->trashCan = new TrashCan();
     }
 
     /**
@@ -83,20 +94,31 @@ class Kitchen implements KitchenInterface
     {
         return $this->tv;
     }
-
-    public function getDishWasher(): DishWasherInterface
+	
+	/**
+	 * @return DishWasherInterface
+	 */
+	public function getDishWasher(): DishWasherInterface
     {
         return $this->dishWasher;
     }
+	
+	/**
+	 * @return TrashCanInterface
+	 */
+	public function getTrashCan(): TrashCanInterface
+	{
+		return $this->trashCan;
+	}
 
     /**
      * Комната или дом может принимать посетителей.
      *
      * @param VisitorInterface $person
-     * @return SpaceInterface
+     * @return SpaceAbstractClass
      */
-    public function accept(VisitorInterface $person): SpaceInterface
-    {
-        // TODO: Implement accept() method.
-    }
+//    public function accept(VisitorInterface $person): SpaceInterface
+//    {
+//        // TODO: Implement accept() method.
+//    }
 }

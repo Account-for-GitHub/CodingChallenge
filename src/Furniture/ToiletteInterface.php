@@ -5,7 +5,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 /**
  * Физиологически необходим в любом жилом месте..
  */
-interface ToiletteInterface
+interface ToiletteInterface extends Furniture
 {
     /**
      * Лучше держать его чистым..

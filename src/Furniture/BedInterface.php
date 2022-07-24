@@ -4,7 +4,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 /**
  * В доме нужна кровать, так как на диване через несколько дней станет некомфортно.
  */
-interface BedInterface
+interface BedInterface extends Furniture
 {
     /**
      * Кровать нужно иногда заправлять

@@ -9,10 +9,10 @@ use Ekomobile\CodingChallenge\Furniture\Table;
 use Ekomobile\CodingChallenge\Furniture\TableInterface;
 use Ekomobile\CodingChallenge\Furniture\Tv;
 use Ekomobile\CodingChallenge\Furniture\TvInterface;
-use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\SpaceAbstractClass;
 use Ekomobile\CodingChallenge\VisitorInterface;
 
-class LivingRoom implements LivingRoomInterface
+class LivingRoom extends SpaceAbstractClass implements LivingRoomInterface
 {
     /**
      * @var TableInterface
@@ -70,10 +70,10 @@ class LivingRoom implements LivingRoomInterface
      * Комната или дом может принимать посетителей.
      *
      * @param VisitorInterface $person
-     * @return SpaceInterface
+     * @return SpaceAbstractClass
      */
-    public function accept(VisitorInterface $person): SpaceInterface
-    {
-        // TODO: Implement accept() method.
-    }
+//    public function accept(VisitorInterface $person): SpaceInterface
+//    {
+//        // TODO: Implement accept() method.
+//    }
 }

@@ -10,8 +10,8 @@ interface VisitorInterface
     /**
      * Человек может посещать места, чтобы делать свои дела.
      *
-     * @param SpaceInterface $space
+     * @param SpaceAbstractClass $space
      * @return VisitorInterface
      */
-    public function visit(SpaceInterface $space): VisitorInterface;
+    public function visit(SpaceAbstractClass $space): VisitorInterface;
 }

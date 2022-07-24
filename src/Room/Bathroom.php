@@ -6,10 +6,9 @@ use Ekomobile\CodingChallenge\Furniture\Sink;
 use Ekomobile\CodingChallenge\Furniture\SinkInterface;
 use Ekomobile\CodingChallenge\Furniture\Toilette;
 use Ekomobile\CodingChallenge\Furniture\ToiletteInterface;
-use Ekomobile\CodingChallenge\VisitorInterface;
-use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\SpaceAbstractClass;
 
-class Bathroom implements BathroomInterface
+class Bathroom extends SpaceAbstractClass implements BathroomInterface
 {
     /**
      * @var SinkInterface
@@ -46,8 +45,8 @@ class Bathroom implements BathroomInterface
     /**
      * {@inheritdoc}
      */
-    public function accept(VisitorInterface $person): SpaceInterface
-    {
-        // TODO: Implement accept() method.
-    }
+//    public function accept(VisitorInterface $person): SpaceInterface
+//    {
+//        // TODO: Implement accept() method.
+//    }
 }

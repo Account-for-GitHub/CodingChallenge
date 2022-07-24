@@ -10,9 +10,9 @@ use Ekomobile\CodingChallenge\Furniture\GarbageBinInterface;
 use Ekomobile\CodingChallenge\Furniture\Table;
 use Ekomobile\CodingChallenge\Furniture\TableInterface;
 use Ekomobile\CodingChallenge\VisitorInterface;
-use Ekomobile\CodingChallenge\SpaceInterface;
+use Ekomobile\CodingChallenge\SpaceAbstractClass;
 
-class Bedroom implements BedroomInterface
+class Bedroom extends SpaceAbstractClass implements BedroomInterface
 {
     /**
      * @var BedInterface
@@ -70,10 +70,10 @@ class Bedroom implements BedroomInterface
      * Комната или дом может принимать посетителей.
      *
      * @param VisitorInterface $person
-     * @return SpaceInterface
+     * @return SpaceAbstractClass
      */
-    public function accept(VisitorInterface $person): SpaceInterface
-    {
-        // TODO: Implement accept() method.
-    }
+//    public function accept(VisitorInterface $person): SpaceInterface
+//    {
+//        // TODO: Implement accept() method.
+//    }
 }

@@ -7,7 +7,7 @@ use Ekomobile\CodingChallenge\Stuff\TrashInterface;
 /**
  * Место для мусора.
  */
-interface GarbageBinInterface
+interface GarbageBinInterface extends Furniture
 {
     /**
      * Рано или поздно корзину придется опустошить..

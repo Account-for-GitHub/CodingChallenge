@@ -8,7 +8,7 @@ use Ekomobile\CodingChallenge\Stuff\DishesInterface;
 /**
  * Отличный помощник на кухне
  */
-interface SinkInterface
+interface SinkInterface extends Furniture
 {
     /**
      * Ленивые жильцы постоянно оставляют тут свои тарелки!

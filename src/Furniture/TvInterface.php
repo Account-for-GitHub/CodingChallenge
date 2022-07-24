@@ -5,7 +5,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 /*
  * Способ почилить
  */
-interface TvInterface
+interface TvInterface extends Furniture
 {
     /**
      * Экран покрывается пылью и просмотр телевизора перестает доставлять

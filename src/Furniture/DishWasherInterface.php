@@ -4,7 +4,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 
 use Ekomobile\CodingChallenge\Stuff\Dishes;
 
-interface DishWasherInterface
+interface DishWasherInterface extends Furniture
 {
     /**
      * Загрузи, чтобы помыть.

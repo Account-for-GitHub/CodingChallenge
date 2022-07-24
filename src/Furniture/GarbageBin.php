@@ -8,14 +8,17 @@ class GarbageBin implements GarbageBinInterface
 {
 	private $trash;
 	
+	/**
+	 * @param TrashInterface|NULL $trash_object
+	 */
 	public function __construct(TrashInterface $trash_object = NULL)
 	{
 		$this->trash = $trash_object;
 	}
 	
-    /**
-     * {@inheritdoc}
-     */
+	/**
+	 * {@inheritdoc}
+	 */
     public function removeTrash(): ?TrashInterface
     {
 		$trash = $this->trash;

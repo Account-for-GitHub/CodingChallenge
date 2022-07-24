@@ -4,7 +4,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 
 use Ekomobile\CodingChallenge\Stuff\TrashInterface;
 
-interface SofaInterface
+interface SofaInterface extends Furniture
 {
     /**
      * Иногда хочется просто расслабиться на диване.

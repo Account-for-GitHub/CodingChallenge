@@ -5,7 +5,7 @@ namespace Ekomobile\CodingChallenge\Furniture;
 /**
  * Стол может находиться в нескольких местах в доме.
  */
-interface TableInterface
+interface TableInterface extends Furniture
 {
     /**
      * Просто протри стол, когда он запылится.

@@ -10,13 +10,13 @@ use Ekomobile\CodingChallenge\Room\LivingRoom;
 use PhpCollection\Set;
 use PhpCollection\SetInterface;
 
-class House implements HouseInterface
+class House extends HouseAbstractClass
 {
 
     /**
      * @var SetInterface of SpaceInterface
      */
-    private $rooms;
+	private $rooms;
 
     public function __construct()
     {
@@ -27,10 +27,10 @@ class House implements HouseInterface
      * Комната или дом может принимать посетителей.
      *
      * @param VisitorInterface $person
-     * @return SpaceInterface
+     * @return SpaceAbstractClass
      */
-    public function accept(VisitorInterface $person): SpaceInterface
-    {
-        // TODO: Implement accept() method.
-    }
+//    public function accept(VisitorInterface $person): SpaceInterface
+//    {
+//        // TODO: Implement accept() method.
+//    }
 }
