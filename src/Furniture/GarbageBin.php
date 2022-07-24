@@ -9,7 +9,7 @@ class GarbageBin implements GarbageBinInterface
 	
 	private $trash_array;
 	
-	public function __construct(TrashInterface $trash_object)
+	public function __construct(?TrashInterface $trash_object)
 	{
 		$this->trash_array[] = $trash_object;
 	}
