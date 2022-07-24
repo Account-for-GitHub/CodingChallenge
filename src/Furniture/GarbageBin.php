@@ -8,7 +8,7 @@ class GarbageBin implements GarbageBinInterface
 {
 	private $trash;
 	
-	public function __construct(?TrashInterface $trash_object)
+	public function __construct(TrashInterface $trash_object = NULL)
 	{
 		$this->trash = $trash_object;
 	}
@@ -19,7 +19,7 @@ class GarbageBin implements GarbageBinInterface
     public function removeTrash(): ?TrashInterface
     {
 		$trash = $this->trash;
-		$this->trash = null;
+		$this->trash = NULL;
 		
         return $trash;
     }
