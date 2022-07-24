@@ -6,12 +6,11 @@ use Ekomobile\CodingChallenge\Stuff\TrashInterface;
 
 class GarbageBin implements GarbageBinInterface
 {
-	
-	private $trash_array;
+	private $trash;
 	
 	public function __construct(?TrashInterface $trash_object)
 	{
-		$this->trash_array[] = $trash_object;
+		$this->trash = $trash_object;
 	}
 	
     /**
@@ -19,6 +18,9 @@ class GarbageBin implements GarbageBinInterface
      */
     public function removeTrash(): ?TrashInterface
     {
-        return array_pop($this->trash_array);
+		$trash = $this->trash;
+		$this->trash = null;
+		
+        return $trash;
     }
 }
