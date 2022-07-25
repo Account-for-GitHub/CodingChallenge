@@ -4,7 +4,9 @@ namespace Ekomobile\CodingChallenge;
 
 class Person implements VisitorInterface
 {
-	private $current_space;
+	private $current_space_object;
+	
+	private $current_space_name; 
 	
     /**
      * {@inheritdoc}
@@ -21,6 +23,21 @@ class Person implements VisitorInterface
 	 */
 	public function visit(SpaceAbstractClass $space): VisitorInterface
     {
-		$this->current_space = $space;
+		$this->current_space_object = $space;
+		$this->getCurrentSpaceName($space);
+		
+		return $this;
     }
+	
+	public function getCurrentSpaceName(SpaceAbstractClass $space): void
+	{
+		$space_name_parts_array =  explode('\\', get_class($space));
+		
+		$this->current_space_name = array_pop($space_name_parts_array);
+	}
+	
+	public function showNameOfTheCurrentSpace(): string
+	{
+		return $this->current_space_name;
+	}
 }

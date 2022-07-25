@@ -18,7 +18,10 @@ class HouseBuilderTest extends TestCase
 		$builder->addRoom(new Bedroom());
 		$builder->addRoom(new LivingRoom());
 		$house = $builder->getHouse();
-		$this->assertInstanceOf(CustomHouse::class, $house, 'This is not a house');
+		$this->assertInstanceOf(
+			CustomHouse::class, 
+			$house, 
+			'This is not a house');
 	}
 	
 }

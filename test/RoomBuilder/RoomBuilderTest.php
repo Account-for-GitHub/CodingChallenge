@@ -21,12 +21,20 @@ class RoomBuilderTest extends TestCase
 		$builder->addRoomPart(new Sofa());
 		$builder->addRoomPart(new Table());
 		$room = $builder->getRoom();
-		$this->assertInstanceOf(CustomRoom::class, $room, 'This is not a room');
+		$this->assertInstanceOf(
+			CustomRoom::class,
+			$room, 
+			'This is not a room'
+		);
 		
 		$furniture = $room->interactWith('Tv');
 		$furniture = $furniture->removeDust();
 		$furniture = $furniture->watchAMovie();
-		$this->assertInstanceOf(Furniture::class, $furniture, 'This is not a furniture');
+		$this->assertInstanceOf(
+			Furniture::class, 
+			$furniture, 
+			'This is not a furniture'
+		);
 	}
 
 }
