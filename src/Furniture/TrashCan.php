@@ -14,4 +14,12 @@ class TrashCan implements TrashCanInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        $this->dump();
+    }
 }

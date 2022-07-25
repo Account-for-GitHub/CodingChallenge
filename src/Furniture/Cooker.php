@@ -12,4 +12,12 @@ class Cooker implements CookerInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        $this->clean();
+    }
 }

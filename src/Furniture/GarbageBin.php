@@ -26,4 +26,12 @@ class GarbageBin implements GarbageBinInterface
 		
         return $trash;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        $this->removeTrash();
+    }
 }

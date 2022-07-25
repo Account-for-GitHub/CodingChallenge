@@ -22,4 +22,13 @@ class Sofa implements SofaInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        // Ещё немного отдыха за хорошую работу не помешает
+        $this->takeANap()->removeNewsPapers();
+    }
 }

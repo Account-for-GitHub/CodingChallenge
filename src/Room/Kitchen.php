@@ -15,12 +15,13 @@ use Ekomobile\CodingChallenge\Furniture\TrashCanInterface;
 use Ekomobile\CodingChallenge\Furniture\Tv;
 use Ekomobile\CodingChallenge\Furniture\TvInterface;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
+use Ekomobile\CodingChallenge\SpaceInterface;
 use Ekomobile\CodingChallenge\VisitorInterface;
 
 /**
  * Простая реализация Кухни
  */
-class Kitchen extends SpaceAbstractClass implements KitchenInterface
+class Kitchen extends SpaceAbstractClass implements KitchenInterface, SpaceInterface
 {
     /**
      * @var CookerInterface

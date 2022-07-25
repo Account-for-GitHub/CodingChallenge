@@ -4,6 +4,7 @@ namespace Ekomobile\CodingChallenge\HouseBuilder;
 
 use Ekomobile\CodingChallenge\RoomBuilder\BuilderInterface;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
+use Ekomobile\CodingChallenge\SpaceInterface;
 
 class HouseBuilder implements HouseBuilderInterface
 {
@@ -14,7 +15,7 @@ class HouseBuilder implements HouseBuilderInterface
 		$this->house = $foundation_object;
 	}
 	
-	public function addRoom(SpaceAbstractClass $room)
+	public function addRoom(SpaceInterface $room)
 	{
 		$this->house->addRoom($room);
 	}

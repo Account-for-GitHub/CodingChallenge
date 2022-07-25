@@ -13,5 +13,5 @@ interface VisitorInterface
      * @param SpaceAbstractClass $space
      * @return VisitorInterface
      */
-    public function visit(SpaceAbstractClass $space): VisitorInterface;
+    public function visit(SpaceInterface $space): VisitorInterface;
 }

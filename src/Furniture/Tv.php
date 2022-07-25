@@ -20,4 +20,13 @@ class Tv implements TvInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        // Вытирать пыль можно и во время просмотра
+        $this->watchAMovie()->removeDust();
+    }
 }

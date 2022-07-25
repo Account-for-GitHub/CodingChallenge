@@ -4,8 +4,9 @@ namespace Ekomobile\CodingChallenge\RoomBuilder;
 
 use Ekomobile\CodingChallenge\Furniture\Furniture;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
+use Ekomobile\CodingChallenge\SpaceInterface;
 
-class CustomRoom extends SpaceAbstractClass implements Placement
+class CustomRoom extends SpaceAbstractClass implements Placement, SpaceInterface
 {
 	private $room_parts = [];
 	

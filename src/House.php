@@ -10,7 +10,7 @@ use Ekomobile\CodingChallenge\Room\LivingRoom;
 use PhpCollection\Set;
 use PhpCollection\SetInterface;
 
-class House extends HouseAbstractClass
+class House extends SpaceAbstractClass implements HouseInterface, SpaceInterface
 {
 
     /**
@@ -20,7 +20,8 @@ class House extends HouseAbstractClass
 
     public function __construct()
     {
-        $this->rooms = new Set([new Bathroom(),new LivingRoom(), new Bedroom(), new Kitchen()]);
+//        $this->rooms = new Set([new Bathroom(),new LivingRoom(), new Bedroom(), new Kitchen()]);
+        $this->rooms = [new Bathroom(), new LivingRoom(), new Bedroom(), new Kitchen(), new LivingRoom()];
     }
 
     /**
@@ -33,4 +34,9 @@ class House extends HouseAbstractClass
 //    {
 //        // TODO: Implement accept() method.
 //    }
+
+    public function getAllRooms(): array
+    {
+        return $this->rooms;
+    }
 }

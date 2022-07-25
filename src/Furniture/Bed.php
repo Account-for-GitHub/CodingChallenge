@@ -19,4 +19,13 @@ class Bed implements BedInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        // Как заправлять кровать не отдохнув на ней перед этим!
+        $this->takeANap()->tidyUp();
+    }
 }

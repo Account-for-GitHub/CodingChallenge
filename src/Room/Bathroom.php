@@ -7,8 +7,9 @@ use Ekomobile\CodingChallenge\Furniture\SinkInterface;
 use Ekomobile\CodingChallenge\Furniture\Toilette;
 use Ekomobile\CodingChallenge\Furniture\ToiletteInterface;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
+use Ekomobile\CodingChallenge\SpaceInterface;
 
-class Bathroom extends SpaceAbstractClass implements BathroomInterface
+class Bathroom extends SpaceAbstractClass implements BathroomInterface, SpaceInterface
 {
     /**
      * @var SinkInterface

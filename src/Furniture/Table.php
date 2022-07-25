@@ -12,4 +12,12 @@ class Table implements TableInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        $this->clear();
+    }
 }

@@ -9,10 +9,11 @@ use Ekomobile\CodingChallenge\Furniture\GarbageBin;
 use Ekomobile\CodingChallenge\Furniture\GarbageBinInterface;
 use Ekomobile\CodingChallenge\Furniture\Table;
 use Ekomobile\CodingChallenge\Furniture\TableInterface;
+use Ekomobile\CodingChallenge\SpaceInterface;
 use Ekomobile\CodingChallenge\VisitorInterface;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
 
-class Bedroom extends SpaceAbstractClass implements BedroomInterface
+class Bedroom extends SpaceAbstractClass implements BedroomInterface, SpaceInterface
 {
     /**
      * @var BedInterface

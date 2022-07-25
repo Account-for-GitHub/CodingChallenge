@@ -11,4 +11,12 @@ class Toilette implements ToiletteInterface
     {
         return $this;
     }
+
+    /**
+     * @return void
+     */
+    public function executeClearUpStrategy()
+    {
+        $this->clean();
+    }
 }

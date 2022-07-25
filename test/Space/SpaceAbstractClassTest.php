@@ -1,6 +1,6 @@
 <?php
 
-namespace Ekomobile\CodingChallenge\Test;
+namespace Ekomobile\CodingChallenge\Test\Space;
 
 use Ekomobile\CodingChallenge\Furniture\Sofa;
 use Ekomobile\CodingChallenge\Furniture\Table;
@@ -13,7 +13,6 @@ use Ekomobile\CodingChallenge\Room\Kitchen;
 use Ekomobile\CodingChallenge\Room\LivingRoom;
 use Ekomobile\CodingChallenge\RoomBuilder\CustomRoom;
 use Ekomobile\CodingChallenge\RoomBuilder\RoomBuilder;
-use Ekomobile\CodingChallenge\SpaceAbstractClass;
 use PHPUnit\Framework\TestCase;
 
 class SpaceAbstractClassTest extends TestCase
@@ -26,23 +25,23 @@ class SpaceAbstractClassTest extends TestCase
 		
 		$space = new House();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		
 		$space = new Bathroom();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		
 		$space = new Bedroom();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		
 		$space = new Kitchen();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		
 		$space = new LivingRoom();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		
 		$this->assertTrue(
 			$person->showNameOfTheCurrentSpace() == 'LivingRoom', 
@@ -57,14 +56,14 @@ class SpaceAbstractClassTest extends TestCase
 		$builder->addRoomPart(new Table());
 		$space = $builder->getRoom();
 		$space->accept($person);
-		$this->where_is_person($person);
+		$this->whereIsPerson($person);
 		$this->assertTrue(
 			$person->showNameOfTheCurrentSpace() == 'CustomRoom',
 			'Custom room visiting is not working'
 		);
 	}
 	
-	public function where_is_person(Person $person)
+	public function whereIsPerson(Person $person)
 	{
 		echo  PHP_EOL . 'Person visited: ' . $person->showNameOfTheCurrentSpace();
 	}

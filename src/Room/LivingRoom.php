@@ -10,9 +10,10 @@ use Ekomobile\CodingChallenge\Furniture\TableInterface;
 use Ekomobile\CodingChallenge\Furniture\Tv;
 use Ekomobile\CodingChallenge\Furniture\TvInterface;
 use Ekomobile\CodingChallenge\SpaceAbstractClass;
+use Ekomobile\CodingChallenge\SpaceInterface;
 use Ekomobile\CodingChallenge\VisitorInterface;
 
-class LivingRoom extends SpaceAbstractClass implements LivingRoomInterface
+class LivingRoom extends SpaceAbstractClass implements LivingRoomInterface, SpaceInterface
 {
     /**
      * @var TableInterface
